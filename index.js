@@ -13,6 +13,7 @@ const data = JSON.parse(fs.readFileSync("data.json","utf-8"));
 // }
 // // server.use(auth)
 server.use(express.json())
+server.use(express.static("public"));
 const auth = (req, res, next)=>{
     // console.log(req.method)
     if(req.body.password == '123'){
