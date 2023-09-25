@@ -12,3 +12,7 @@ app.set("view enginne", "ejs");
 app.get("/", (req, res)=>{
     res.render("home.ejs");
 })
+
+ap.get("/dice", (req, res)=>{
+    res.render("dice.ejs")
+})
