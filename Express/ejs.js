@@ -13,6 +13,7 @@ app.get("/", (req, res)=>{
     res.render("home.ejs");
 })
 
-ap.get("/dice", (req, res)=>{
-    res.render("dice.ejs")
+app.get("/dice", (req, res)=>{
+    const data = Math.floor(Math.random() * 6) + 1;
+    res.render("dice.ejs", {num : data})
 })
