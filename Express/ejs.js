@@ -15,5 +15,10 @@ app.get("/", (req, res)=>{
 
 app.get("/dice", (req, res)=>{
     const data = Math.floor(Math.random() * 6) + 1;
-    res.render("dice.ejs", {num : data})
+    res.render("dice.ejs", {data})
+})
+
+app.get("/insta/:username", (req, res)=>{
+    const {username} = req.params;
+    res.render("instagram.ejs", {username});
 })
